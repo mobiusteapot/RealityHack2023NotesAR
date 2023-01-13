@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.qualcomm.snapdragon.spaces": {
-      "version": "file:/Users/mobiusteapot/Downloads/Snapdragon_Spaces_SDK_for_Unity_0_9_0/Unity Package/SnapdragonSpaces_Package_0_9_0.tgz",
+      "version": "file:SnapdragonSpaces_Package_0_9_0.tgz",
       "depth": 0,
       "source": "local-tarball",
       "dependencies": {
@@ -62,7 +62,7 @@
     },
     "com.unity.inputsystem": {
       "version": "1.4.4",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
@@ -133,7 +133,7 @@
     },
     "com.unity.subsystemregistration": {
       "version": "1.1.0",
-      "depth": 3,
+      "depth": 2,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0"
@@ -238,7 +238,7 @@
     },
     "com.unity.xr.legacyinputhelpers": {
       "version": "2.1.10",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.vr": "1.0.0",
@@ -248,7 +248,7 @@
     },
     "com.unity.xr.management": {
       "version": "4.2.0",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.modules.subsystems": "1.0.0",
@@ -261,7 +261,7 @@
     },
     "com.unity.xr.openxr": {
       "version": "1.5.3",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.xr.management": "4.0.1",

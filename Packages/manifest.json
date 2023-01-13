@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.qualcomm.snapdragon.spaces": "file:/Users/mobiusteapot/Downloads/Snapdragon_Spaces_SDK_for_Unity_0_9_0/Unity Package/SnapdragonSpaces_Package_0_9_0.tgz",
+    "com.qualcomm.snapdragon.spaces": "file:SnapdragonSpaces_Package_0_9_0.tgz",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.ide.rider": "3.0.16",
     "com.unity.ide.visualstudio": "2.0.16",
@@ -11,6 +11,7 @@
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
+    "com.unity.xr.openxr": "1.5.3",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
