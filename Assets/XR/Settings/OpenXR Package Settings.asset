@@ -43,7 +43,7 @@ MonoBehaviour:
   CheckInstalledRuntime: 1
   LaunchAppOnViewer: 1
   LaunchControllerOnHost: 1
-  UseCustomController: 0
+  UseCustomController: 1
   ExportHeadless: 0
   AlternateStartActivity: 
   SkipPermissionChecks: 0

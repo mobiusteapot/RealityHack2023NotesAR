@@ -53,7 +53,7 @@ class ControllerActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    override fun super.onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+    override fun super.onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray?) {
         permission.handlePermissionsResult(requestCode, permissions, grantResults)
     }
 
