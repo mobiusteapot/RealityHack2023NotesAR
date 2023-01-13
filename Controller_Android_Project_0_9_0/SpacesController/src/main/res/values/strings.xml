@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Input emulator -->
+    <string name="component_menu">Menu</string>
+    <string name="component_re_center">Re-center</string>
+    <string name="component_re_center_subtitle">(Double click)</string>
+    <string name="spaces_controller_profile">Spaces Controller</string>
+    <string name="title_activity_controller">ControllerActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_spaces_controller">Spaces Controller</string>
+    <string name="menu_recenter_controller">Recenter Controller</string>
+    <string name="menu_haptic_settings">Haptic Settings</string>
+    <string name="menu_display_settings">Display Settings</string>
+
+    <string name="switch_haptic_feedback">Haptic Feedback</string>
+    <string name="strength">Strength</string>
+
+    <string name="light_mode">Light mode</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="auto_mode">Auto</string>
+
+    <string name="recenter_info_paragraph1">Some Snapdragon Spaces apps contain a digital laser that is
+        controlled by the rotation of the companion controller. For these apps, occasionally the
+        controller orientation may become misaligned with the digital laser, with the controller
+        pointing in one direction with the laser pointing in another.
+    </string>
+    <string name="recenter_info_paragraph2">
+        When this happens, you can re-orient the controller by performing the following steps:
+    </string>
+    <string name="recenter_info_paragraph3">
+        1.	Click and hold the RECENTER Button which can be found at the bottom of Controller App
+        while experiencing the offset inside the glasses application. This will freeze the digital laser in place.
+    </string>
+    <string name="recenter_info_paragraph4">
+        2.	While holding the button down you can move and rotate the physical phone
+        to attempt to align the rotation with the laser.
+    </string>
+    <string name="recenter_info_paragraph5">
+        3.	Once lined up, release the RECENTER button to track to the new orientation setting.
+    </string>
+    <string name="recenter_info_paragraph6">
+        4.	You may need to repeat this operation and experiment with different controller
+        orientation offsets in order to achieve proper alignment.
+    </string>
+
+    <!-- Shared preferences -->
+    <string name="preference_haptic_enabled">preference_haptic_enabled</string>
+    <string name="preference_haptic_strength">preference_haptic_strength</string>
+    <string name="preference_display_mode">preference_display_mode</string>
+    <!-- End Shared preferences -->
+</resources>

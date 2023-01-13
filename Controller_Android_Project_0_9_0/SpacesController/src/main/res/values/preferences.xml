@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Haptic preferences -->
+    <bool name="preference_haptic_enabled">true</bool>
+    <integer name="preference_haptic_strength">255</integer>
+    <!-- End Haptic preferences -->
+
+    <!-- Display preferences -->
+    <integer name="preference_display_mode">2</integer>
+    <!-- End display preferences -->
+</resources>

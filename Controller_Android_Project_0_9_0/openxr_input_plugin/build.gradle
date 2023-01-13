@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('snapdragon-openxr-input-plugin-spaces-client-v0.9.8-release.aar'))

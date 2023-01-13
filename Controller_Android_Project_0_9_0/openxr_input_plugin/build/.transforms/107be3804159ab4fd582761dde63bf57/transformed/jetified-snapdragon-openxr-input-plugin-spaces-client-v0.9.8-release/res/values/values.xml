@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_height">120dp</dimen>
+    <dimen name="btn_s_height">90dp</dimen>
+    <dimen name="btn_s_width">90dp</dimen>
+    <dimen name="btn_width">120dp</dimen>
+    <dimen name="common_margin_m">16dp</dimen>
+    <dimen name="thumbstick_height">150dp</dimen>
+    <dimen name="thumbstick_width">150dp</dimen>
+    <dimen name="trackpad_height">180dp</dimen>
+    <dimen name="trackpad_width">180dp</dimen>
+    <string name="component_menu">Menu</string>
+    <string name="component_select">Select</string>
+    <string name="component_squeeze">Squeeze</string>
+    <string name="component_thumbstick">Thumbstick</string>
+    <string name="component_trackpad">Trackpad</string>
+    <string name="component_trigger">Trigger</string>
+    <style name="ComponentButton">
+        <item name="android:background">@drawable/component_btn_background</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+</resources>

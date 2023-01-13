@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#E9EBEE</color>
+    <color name="colorAccent">#1F3E5E</color>
+    <color name="toolbar_background">#16324F</color>
+
+    <color name="appbar_title">#000000</color>
+
+    <color name="re_center_title_color">#0B2742</color>
+    <color name="re_center_subtitle_color">#801F3E5E</color>
+
+    <color name="nav_view_background_color">#FFFFFF</color>
+
+    <color name="background_color">#FFFFFF</color>
+
+    <color name="color_switch_on">#3253DC</color>
+    <color name="color_switch_normal">#FFFFFFFF</color>
+    <color name="color_switch_off">#61d8d8d8</color>
+
+    <color name="sidebar_icon_tint">#99000000</color>
+    <color name="sidebar_text_color">#99000000</color>
+
+</resources>

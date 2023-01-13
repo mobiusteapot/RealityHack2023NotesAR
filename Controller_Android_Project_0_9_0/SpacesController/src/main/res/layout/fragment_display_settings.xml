@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.display_settings.DisplaySettingsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radio_group_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:divider="@drawable/divider_drawable"
+            android:showDividers="middle|end"
+            android:layout_margin="24dp">
+            <RadioButton android:id="@+id/radio_light_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:paddingVertical="14dp"
+                android:text="@string/light_mode"
+                android:button="@null"
+                android:drawableEnd="@drawable/settings_radio_button"
+                style="@style/SettingsTextTheme"/>
+            <RadioButton android:id="@+id/radio_dark_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:paddingVertical="14dp"
+                android:text="@string/dark_mode"
+                android:button="@null"
+                android:drawableEnd="@drawable/settings_radio_button"
+                style="@style/SettingsTextTheme"/>
+            <RadioButton android:id="@+id/radio_auto_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                android:paddingVertical="14dp"
+                android:text="@string/auto_mode"
+                android:button="@null"
+                android:drawableEnd="@drawable/settings_radio_button"
+                android:checked="true"
+                style="@style/SettingsTextTheme"/>
+        </RadioGroup>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
