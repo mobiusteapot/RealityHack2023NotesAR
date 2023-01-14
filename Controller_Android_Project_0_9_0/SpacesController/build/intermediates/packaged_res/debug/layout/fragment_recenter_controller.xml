@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recenter_controller.RecenterControllerFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="24dp">
+
+            <TextView
+                android:id="@+id/text_recenter_paragraph1"
+                android:text="@string/recenter_info_paragraph1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ReCenterParagraphTheme"/>
+
+            <TextView
+                android:id="@+id/text_recenter_paragraph2"
+                android:text="@string/recenter_info_paragraph2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ReCenterParagraphTheme"/>
+
+            <TextView
+                android:id="@+id/text_recenter_paragraph3"
+                android:text="@string/recenter_info_paragraph3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ReCenterParagraphTheme"/>
+
+            <TextView
+                android:id="@+id/text_recenter_paragraph4"
+                android:text="@string/recenter_info_paragraph4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ReCenterParagraphTheme"/>
+
+            <TextView
+                android:id="@+id/text_recenter_paragraph5"
+                android:text="@string/recenter_info_paragraph5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ReCenterParagraphTheme"/>
+
+            <TextView
+                android:id="@+id/text_recenter_paragraph6"
+                android:text="@string/recenter_info_paragraph6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ReCenterParagraphTheme"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="preference_haptic_enabled">true</bool>
+    <color name="appbar_title">#000000</color>
+    <color name="background_color">#FFFFFF</color>
+    <color name="colorAccent">#1F3E5E</color>
+    <color name="colorPrimary">#E9EBEE</color>
+    <color name="color_switch_normal">#FFFFFFFF</color>
+    <color name="color_switch_off">#61d8d8d8</color>
+    <color name="color_switch_on">#3253DC</color>
+    <color name="nav_view_background_color">#FFFFFF</color>
+    <color name="re_center_subtitle_color">#801F3E5E</color>
+    <color name="re_center_title_color">#0B2742</color>
+    <color name="sidebar_icon_tint">#99000000</color>
+    <color name="sidebar_text_color">#99000000</color>
+    <color name="toolbar_background">#16324F</color>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+    <dimen name="btn_height">120dp</dimen>
+    <dimen name="btn_s_height">90dp</dimen>
+    <dimen name="btn_s_width">90dp</dimen>
+    <dimen name="btn_width">120dp</dimen>
+    <dimen name="common_margin_m">16dp</dimen>
+    <dimen name="thumbstick_height">150dp</dimen>
+    <dimen name="thumbstick_width">150dp</dimen>
+    <dimen name="trackpad_height">180dp</dimen>
+    <dimen name="trackpad_width">180dp</dimen>
+    <integer name="preference_display_mode">2</integer>
+    <integer name="preference_haptic_strength">255</integer>
+    <string name="action_settings">Settings</string>
+    <string name="auto_mode">Auto</string>
+    <string name="component_menu">Menu</string>
+    <string name="component_re_center">Re-center</string>
+    <string name="component_re_center_subtitle">(Double click)</string>
+    <string name="component_select">Select</string>
+    <string name="component_squeeze">Squeeze</string>
+    <string name="component_thumbstick">Thumbstick</string>
+    <string name="component_trackpad">Trackpad</string>
+    <string name="component_trigger">Trigger</string>
+    <string name="dark_mode">Dark mode</string>
+    <string name="light_mode">Light mode</string>
+    <string name="menu_display_settings">Display Settings</string>
+    <string name="menu_haptic_settings">Haptic Settings</string>
+    <string name="menu_recenter_controller">Recenter Controller</string>
+    <string name="menu_spaces_controller">Spaces Controller</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="preference_display_mode">preference_display_mode</string>
+    <string name="preference_haptic_enabled">preference_haptic_enabled</string>
+    <string name="preference_haptic_strength">preference_haptic_strength</string>
+    <string name="recenter_info_paragraph1">Some Snapdragon Spaces apps contain a digital laser that is
+        controlled by the rotation of the companion controller. For these apps, occasionally the
+        controller orientation may become misaligned with the digital laser, with the controller
+        pointing in one direction with the laser pointing in another.
+    </string>
+    <string name="recenter_info_paragraph2">
+        When this happens, you can re-orient the controller by performing the following steps:
+    </string>
+    <string name="recenter_info_paragraph3">
+        1.	Click and hold the RECENTER Button which can be found at the bottom of Controller App
+        while experiencing the offset inside the glasses application. This will freeze the digital laser in place.
+    </string>
+    <string name="recenter_info_paragraph4">
+        2.	While holding the button down you can move and rotate the physical phone
+        to attempt to align the rotation with the laser.
+    </string>
+    <string name="recenter_info_paragraph5">
+        3.	Once lined up, release the RECENTER button to track to the new orientation setting.
+    </string>
+    <string name="recenter_info_paragraph6">
+        4.	You may need to repeat this operation and experiment with different controller
+        orientation offsets in order to achieve proper alignment.
+    </string>
+    <string name="spaces_controller_profile">Spaces Controller</string>
+    <string name="strength">Strength</string>
+    <string name="switch_haptic_feedback">Haptic Feedback</string>
+    <string name="title_activity_controller">ControllerActivity</string>
+    <style name="ComponentButton">
+        <item name="android:background">@drawable/component_btn_background</item>
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+    </style>
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/black</item>
+    </style>
+    <style name="LinearLayoutTheme" parent="Theme.SpacesController">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:maxHeight">64dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="MenuButtonTheme" parent="Theme.SpacesController">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:maxHeight">64dp</item>
+        <item name="android:fontFamily">@font/qualcomm_next_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/menu_button</item>
+    </style>
+    <style name="ReCenterParagraphTheme" parent="Theme.SpacesController">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/qualcomm_next_regular</item>
+        <item name="android:lineHeight">18dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+    <style name="ReCenterTextTheme" parent="Theme.SpacesController">
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:fontFamily">@font/qualcomm_next_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="SettingsTextTheme" parent="Theme.SpacesController">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily">@font/qualcomm_next_regular</item>
+        <item name="android:lineHeight">18dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+    <style name="SettingsTheme" parent="Theme.SpacesController">
+        <item name="colorControlActivated">@color/color_switch_on</item>
+        <item name="colorSwitchThumbNormal">@color/color_switch_normal</item>
+        <item name="android:progressBackgroundTint">@color/color_switch_off</item>
+        <item name="android:progressTint">@color/color_switch_on</item>
+    </style>
+    <style name="Theme.SpacesController" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="actionBarSize">56dp</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    <style name="Theme.SpacesController.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.SpacesController.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

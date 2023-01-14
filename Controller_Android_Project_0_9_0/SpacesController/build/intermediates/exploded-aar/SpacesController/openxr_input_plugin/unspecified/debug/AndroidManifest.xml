@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qualcomm.qti.openxr.input.spaces.client" >
+
+    <uses-sdk
+        android:minSdkVersion="27"
+        android:targetSdkVersion="31" />
+
+    <!-- For query space input service -->
+    <queries>
+        <intent>
+            <action android:name="com.qualcomm.qti.openxr.spaces.intent.action.BIND" />
+        </intent>
+    </queries>
+
+    <!-- for haptic events -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+</manifest>

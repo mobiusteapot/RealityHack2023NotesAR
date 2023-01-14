@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation2"
+    app:startDestination="@+id/nav_spaces_controller">
+
+    <fragment
+        android:id="@+id/nav_spaces_controller"
+        android:name="com.qualcomm.snapdragon.spaces.spacescontroller.ui.spaces_controller.SpacesControllerFragment"
+        android:label="@string/menu_spaces_controller"
+        tools:layout="@layout/fragment_spaces_controller" />
+
+    <fragment
+        android:id="@+id/nav_display_settings"
+        android:name="com.qualcomm.snapdragon.spaces.spacescontroller.ui.display_settings.DisplaySettingsFragment"
+        android:label="@string/menu_display_settings"
+        tools:layout="@layout/fragment_display_settings" />
+
+    <fragment
+        android:id="@+id/nav_haptic_settings"
+        android:name="com.qualcomm.snapdragon.spaces.spacescontroller.ui.haptic_settings.HapticSettingsFragment"
+        android:label="@string/menu_haptic_settings"
+        tools:layout="@layout/fragment_haptic_settings" />
+
+    <!-- TODO: Uncomment when re-center works with press and hold -->
+    <!--<fragment
+        android:id="@+id/nav_recenter_controller"
+        android:name="com.qualcomm.snapdragon.spaces.spacescontroller.ui.recenter_controller.RecenterControllerFragment"
+        android:label="@string/menu_recenter_controller"
+        tools:layout="@layout/fragment_recenter_controller" />-->
+</navigation>

@@ -1,5 +1,11 @@
 package com.qualcomm.snapdragon.spaces.spacescontroller.util
 
+import android.content.Context
+import android.util.Log
+import androidx.core.app.ActivityCompat
+import android.content.pm.PackageManager
+import android.app.Activity
+
 class Permission{
     private val tag = "Permission message"
     private val userMicrophonePermissionAgreeCode = 1
@@ -14,11 +20,11 @@ class Permission{
             ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.RECORD_AUDIO), userMicrophonePermissionAgreeCode)
     }
     fun askCameraPermission(context: Context){
-        val currentCameraPermission = ActivityCompat.checkSelfPermission(context,android.Manifest.permission.CAMERA)
-
-
-        if(currentCameraPermission != PackageManager.PERMISSION_GRANTED)
-            ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.CAMERA), )
+//        val currentCameraPermission = ActivityCompat.checkSelfPermission(context,android.Manifest.permission.CAMERA)
+//
+//
+//        if(currentCameraPermission != PackageManager.PERMISSION_GRANTED)
+//            ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.CAMERA), )
     }
 
     fun handlePermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.haptic_settings.HapticSettingsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="end"
+                android:divider="@drawable/divider_drawable">
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/haptic_feedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/switch_haptic_feedback"
+                        android:theme="@style/SettingsTheme"
+                        android:minHeight="0dp"
+                        style="@style/SettingsTextTheme"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/haptic_strength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:showDividers="end"
+                android:paddingTop="16dp"
+                android:divider="@drawable/divider_drawable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/strength"
+                    style="@style/SettingsTextTheme"/>
+
+                <androidx.appcompat.widget.AppCompatSeekBar
+                    android:id="@+id/haptic_strength_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingVertical="30dp"
+                    android:min="1"
+                    android:max="255"
+                    android:progress="255"
+                    android:progressDrawable="@drawable/haptic_strength_style"
+                    android:thumb="@drawable/haptic_strength_thumb"
+                    android:theme="@style/SettingsTheme"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

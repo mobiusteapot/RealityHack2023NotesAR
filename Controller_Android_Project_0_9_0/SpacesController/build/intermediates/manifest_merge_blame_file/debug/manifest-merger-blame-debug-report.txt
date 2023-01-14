@@ -1,0 +1,44 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.qualcomm.snapdragon.spaces.spacescontroller" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="29"
+6-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="30" />
+7-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml
+8
+9    <uses-feature android:name="android.hardware.camera.any" />
+9-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:5:5-64
+9-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:5:19-61
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:6:5-65
+11-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:6:22-62
+12    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+12-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:7:5-71
+12-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:7:22-68
+13    <uses-permission
+13-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:8:5-9:38
+14        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+14-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:8:22-78
+15        android:maxSdkVersion="28" />
+15-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:9:9-35
+16
+17    <application>
+17-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:11:5-18:19
+18        <activity
+18-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:12:9-17:61
+19            android:name="com.qualcomm.snapdragon.spaces.spacescontroller.ControllerActivity"
+19-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:13:13-47
+20            android:exported="false"
+20-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:15:13-37
+21            android:label="@string/title_activity_controller"
+21-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:16:13-62
+22            android:screenOrientation="portrait"
+22-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:14:13-49
+23            android:theme="@style/Theme.SpacesController" />
+23-->/Users/mobiusteapot/Documents/Programming/gitRepo/RealityHack2023NotesAR/Controller_Android_Project_0_9_0/SpacesController/src/main/AndroidManifest.xml:17:13-58
+24    </application>
+25
+26</manifest>

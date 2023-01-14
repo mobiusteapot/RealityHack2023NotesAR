@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="appbar_title">#FFFFFF</color>
+    <color name="background_color">#19314b</color>
+    <color name="colorAccent">#1F3E5E</color>
+    <color name="colorPrimary">#1F3E5E</color>
+    <color name="color_switch_normal">#99ffffff</color>
+    <color name="color_switch_off">#61ffffff</color>
+    <color name="color_switch_on">#95B2FF</color>
+    <color name="nav_view_background_color">#0B2742</color>
+    <color name="re_center_subtitle_color">#80CACCCE</color>
+    <color name="re_center_title_color">#FFFFFF</color>
+    <color name="sidebar_icon_tint">#99FFFFFF</color>
+    <color name="sidebar_text_color">#99FFFFFF</color>
+    <color name="toolbar_background">#16324F</color>
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+    <style name="LinearLayoutTheme" parent="Theme.SpacesController">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:maxHeight">64dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="MenuButtonTheme" parent="Theme.SpacesController">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:maxHeight">64dp</item>
+        <item name="android:fontFamily">@font/qualcomm_next_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/menu_button</item>
+    </style>
+    <style name="ReCenterParagraphTheme" parent="Theme.SpacesController">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/qualcomm_next_regular</item>
+        <item name="android:lineHeight">18dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+    <style name="ReCenterTextTheme" parent="Theme.SpacesController">
+        <item name="android:lineHeight">16dp</item>
+        <item name="android:fontFamily">@font/qualcomm_next_medium</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="SettingsTextTheme" parent="Theme.SpacesController">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/qualcomm_next_regular</item>
+        <item name="android:lineHeight">18dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+    <style name="SettingsTheme" parent="Theme.SpacesController">
+        <item name="colorControlActivated">@color/color_switch_on</item>
+        <item name="colorSwitchThumbNormal">@color/color_switch_normal</item>
+        <item name="android:progressBackgroundTint">@color/color_switch_off</item>
+        <item name="android:progressTint">@color/color_switch_on</item>
+    </style>
+    <style name="Theme.SpacesController" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="actionBarSize">56dp</item>
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    <style name="Theme.SpacesController.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.SpacesController.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+</resources>

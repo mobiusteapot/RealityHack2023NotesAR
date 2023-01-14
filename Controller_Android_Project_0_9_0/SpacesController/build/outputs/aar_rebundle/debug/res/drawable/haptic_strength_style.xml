@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@android:id/background"
+        android:gravity="center_vertical"
+        android:height="6dp"
+        android:drawable="@drawable/haptic_strength_shadow" >
+    </item>
+
+    <item
+        android:gravity="center_vertical"
+        android:height="6dp"
+        android:id="@android:id/progress" >
+        <clip
+            android:drawable="@drawable/haptic_strength_progress" />
+    </item>
+</layer-list>
