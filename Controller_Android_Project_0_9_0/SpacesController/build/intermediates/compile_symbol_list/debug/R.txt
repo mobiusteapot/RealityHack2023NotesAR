@@ -1218,6 +1218,9 @@ int color foreground_material_dark 0x0
 int color foreground_material_light 0x0
 int color highlighted_text_material_dark 0x0
 int color highlighted_text_material_light 0x0
+int color icActive 0x0
+int color icFocused 0x0
+int color icPressed 0x0
 int color ic_launcher_background 0x0
 int color material_blue_grey_800 0x0
 int color material_blue_grey_900 0x0
@@ -1328,6 +1331,8 @@ int color secondary_text_default_material_dark 0x0
 int color secondary_text_default_material_light 0x0
 int color secondary_text_disabled_material_dark 0x0
 int color secondary_text_disabled_material_light 0x0
+int color selector_button_text 0x0
+int color selector_ic 0x0
 int color sidebar_icon_tint 0x0
 int color sidebar_text_color 0x0
 int color switch_thumb_disabled_material_dark 0x0
@@ -2035,8 +2040,10 @@ int id accessibility_custom_action_6 0x0
 int id accessibility_custom_action_7 0x0
 int id accessibility_custom_action_8 0x0
 int id accessibility_custom_action_9 0x0
+int id actionCloseCamera 0x0
 int id actionDown 0x0
 int id actionDownUp 0x0
+int id actionOpenCamera 0x0
 int id actionUp 0x0
 int id action_bar 0x0
 int id action_bar_activity_content 0x0
@@ -2085,7 +2092,7 @@ int id callMeasure 0x0
 int id camera_button 0x0
 int id camera_capture_button 0x0
 int id camera_container 0x0
-int id camera_preview 0x0
+int id camera_fragment 0x0
 int id camera_switch_button 0x0
 int id camera_ui_container 0x0
 int id cancel_button 0x0
@@ -2120,6 +2127,7 @@ int id currentState 0x0
 int id custom 0x0
 int id customPanel 0x0
 int id cut 0x0
+int id dataBinding 0x0
 int id date_picker_actions 0x0
 int id decelerate 0x0
 int id decelerateAndComplete 0x0
@@ -2307,6 +2315,8 @@ int id notification_main_column 0x0
 int id notification_main_column_container 0x0
 int id off 0x0
 int id on 0x0
+int id onAttachStateChangeListener 0x0
+int id onDateChanged 0x0
 int id outline 0x0
 int id outward 0x0
 int id overshoot 0x0
@@ -2427,6 +2437,7 @@ int id text 0x0
 int id text2 0x0
 int id textSpacerNoButtons 0x0
 int id textSpacerNoTitle 0x0
+int id textWatcher 0x0
 int id text_input_end_icon 0x0
 int id text_input_error_icon 0x0
 int id text_input_start_icon 0x0
@@ -2644,6 +2655,9 @@ int layout text_view_with_line_height_from_style 0x0
 int layout text_view_with_theme_line_height 0x0
 int layout text_view_without_line_height 0x0
 int menu activity_main_drawer 0x0
+int mipmap ic_launcher 0x0
+int mipmap ic_launcher_foreground 0x0
+int mipmap ic_launcher_round 0x0
 int navigation mobile_navigation 0x0
 int plurals mtrl_badge_content_description 0x0
 int string abc_action_bar_home_description 0x0
@@ -2686,6 +2700,7 @@ int string abc_shareactionprovider_share_with 0x0
 int string abc_shareactionprovider_share_with_application 0x0
 int string abc_toolbar_collapse_description 0x0
 int string action_settings 0x0
+int string androidx_startup 0x0
 int string app_name 0x0
 int string appbar_scrolling_view_behavior 0x0
 int string auto_mode 0x0

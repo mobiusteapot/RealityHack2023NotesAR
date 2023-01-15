@@ -8,7 +8,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.camera.view.PreviewView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
@@ -24,9 +23,6 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
 
   @NonNull
   public final ImageButton cameraButton;
-
-  @NonNull
-  public final PreviewView cameraPreview;
 
   @NonNull
   public final ImageView qrCode;
@@ -47,13 +43,12 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
   public final Guideline spacesProfileTopMargin;
 
   private FragmentSpacesControllerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton cameraButton, @NonNull PreviewView cameraPreview,
-      @NonNull ImageView qrCode, @NonNull ConstraintLayout spacesContainer,
-      @NonNull Guideline spacesProfileBottom, @NonNull Guideline spacesProfileBottomMargin,
-      @NonNull Guideline spacesProfileTop, @NonNull Guideline spacesProfileTopMargin) {
+      @NonNull ImageButton cameraButton, @NonNull ImageView qrCode,
+      @NonNull ConstraintLayout spacesContainer, @NonNull Guideline spacesProfileBottom,
+      @NonNull Guideline spacesProfileBottomMargin, @NonNull Guideline spacesProfileTop,
+      @NonNull Guideline spacesProfileTopMargin) {
     this.rootView = rootView;
     this.cameraButton = cameraButton;
-    this.cameraPreview = cameraPreview;
     this.qrCode = qrCode;
     this.spacesContainer = spacesContainer;
     this.spacesProfileBottom = spacesProfileBottom;
@@ -95,12 +90,6 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.camera_preview;
-      PreviewView cameraPreview = ViewBindings.findChildViewById(rootView, id);
-      if (cameraPreview == null) {
-        break missingId;
-      }
-
       id = R.id.qr_code;
       ImageView qrCode = ViewBindings.findChildViewById(rootView, id);
       if (qrCode == null) {
@@ -137,9 +126,9 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSpacesControllerBinding((ConstraintLayout) rootView, cameraButton,
-          cameraPreview, qrCode, spacesContainer, spacesProfileBottom, spacesProfileBottomMargin,
-          spacesProfileTop, spacesProfileTopMargin);
+      return new FragmentSpacesControllerBinding((ConstraintLayout) rootView, cameraButton, qrCode,
+          spacesContainer, spacesProfileBottom, spacesProfileBottomMargin, spacesProfileTop,
+          spacesProfileTopMargin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

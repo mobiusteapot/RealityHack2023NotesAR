@@ -16,14 +16,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.res.ResourcesCompat
-
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.qualcomm.qti.openxr.input.data.*
 import com.qualcomm.qti.openxr.input.data.fusion.PoseProducer
 import com.qualcomm.qti.openxr.input.data.fusion.SimplePoseProducer
 import com.qualcomm.qti.openxr.input.spaces.client.*
 import com.qualcomm.snapdragon.spaces.spacescontroller.R
 import com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentSpacesControllerBinding
+import com.qualcomm.snapdragon.spaces.spacescontroller.ui.CameraFragment
 import com.qualcomm.snapdragon.spaces.spacescontroller.util.Constants
 import com.qualcomm.snapdragon.spaces.spacescontroller.util.SharedPreferenceManager
 import com.qualcomm.snapdragon.spaces.spacescontroller.util.VibratorManager
@@ -143,7 +145,7 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
                     if (hapticEnabled) {
                         vibratorManager.performHapticFeedback(true, hapticStrength, Constants.HAPTIC_PRESS_DURATION_MS)
                     }
-                    view.isPressed = true
+                    // If this doesn't work try the nav view from camera frag
                     true
                 }
                 MotionEvent.ACTION_UP -> {
@@ -173,6 +175,22 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
 //        removeCroppedTilesFromTrackpadBackground()
 
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.e(TAG, "OnViewCreated has been created")
+
+
+        // view.findNavController().navigate(SpacesControllerFragmentDirections.actionOpenCamera())
+        // On load, bind the touch listener to navigating to the camera fragment
+        _binding?.cameraButton?.setOnClickListener {
+            Log.e(TAG, "OnClickListener has failed before findNavController")
+
+            view.findNavController().navigate(SpacesControllerFragmentDirections.actionOpenCamera())
+            Log.e(TAG, "OnClickListener to open camera has opened")
+
+        }
     }
 
     override fun onDestroyView() {

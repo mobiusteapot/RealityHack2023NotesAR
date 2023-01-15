@@ -60,6 +60,8 @@ import java.util.concurrent.Executors
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
+import androidx.camera.view.PreviewView
+import androidx.camera.*
 
 
 /** Helper type alias used for analysis use case callbacks */
@@ -85,7 +87,7 @@ class CameraFragment : Fragment() {
 
     private var displayId: Int = -1
     private var lensFacing: Int = CameraSelector.LENS_FACING_BACK
-    private var preview: Preview? = null
+//    private var preview: Preview? = null
     private var imageCapture: ImageCapture? = null
     private var imageAnalyzer: ImageAnalysis? = null
     private var camera: Camera? = null
@@ -156,6 +158,7 @@ class CameraFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.e(TAG,"Attempting to create view")
         _fragmentCameraBinding = FragmentCameraBinding.inflate(inflater, container, false)
         return fragmentCameraBinding.root
     }
@@ -176,9 +179,10 @@ class CameraFragment : Fragment() {
         }
     }
 
-    @SuppressLint("MissingPermission")
+//    @SuppressLint("MissingPermission")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d(TAG, "Initial view created")
 
         // Initialize our background executor
         cameraExecutor = Executors.newSingleThreadExecutor()
@@ -196,18 +200,18 @@ class CameraFragment : Fragment() {
         mediaStoreUtils = MediaStoreUtils(requireContext())
 
         // Wait for the views to be properly laid out
-        fragmentCameraBinding.viewFinder.post {
+        // fragmentCameraBinding.viewFinder.post {
 
-            // Keep track of the display in which this view is attached
-            displayId = fragmentCameraBinding.viewFinder.display.displayId
+        // Keep track of the display in which this view is attached
+        // displayId = fragmentCameraBinding.viewFinder.display.displayId
 
             // Build UI controls
-            updateCameraUi()
+        updateCameraUi()
 
-            // Set up the camera and its use cases
-            lifecycleScope.launch {
-                setUpCamera()
-            }
+        // Set up the camera and its use cases
+        lifecycleScope.launch {
+            setUpCamera()
+//            }
         }
     }
 
@@ -267,12 +271,12 @@ class CameraFragment : Fragment() {
         val cameraSelector = CameraSelector.Builder().requireLensFacing(lensFacing).build()
 
         // Preview
-        preview = Preview.Builder()
-            // We request aspect ratio but no resolution
-            .setTargetAspectRatio(screenAspectRatio)
-            // Set initial target rotation
-            .setTargetRotation(rotation)
-            .build()
+//        preview = Preview.Builder()
+//            // We request aspect ratio but no resolution
+//            .setTargetAspectRatio(screenAspectRatio)
+//            // Set initial target rotation
+//            .setTargetRotation(rotation)
+//            .build()
 
         // ImageCapture
         imageCapture = ImageCapture.Builder()
@@ -307,6 +311,7 @@ class CameraFragment : Fragment() {
         cameraProvider.unbindAll()
 
         if (camera != null) {
+            observeCameraState(camera?.cameraInfo!!)
             // Must remove observers from the previous camera instance
             removeCameraStateObservers(camera!!.cameraInfo)
         }
@@ -315,10 +320,10 @@ class CameraFragment : Fragment() {
             // A variable number of use-cases can be passed here -
             // camera provides access to CameraControl & CameraInfo
             camera = cameraProvider.bindToLifecycle(
-                this, cameraSelector, preview, imageCapture, imageAnalyzer)
-
+                this, cameraSelector, imageCapture, imageAnalyzer)
+            // Add preview back :( ^preview
             // Attach the viewfinder's surface provider to preview use case
-            preview?.setSurfaceProvider(fragmentCameraBinding.viewFinder.surfaceProvider)
+            // preview?.setSurfaceProvider(fragmentCameraBinding.viewFinder.surfaceProvider)
             observeCameraState(camera?.cameraInfo!!)
         } catch (exc: Exception) {
             Log.e(TAG, "Use case binding failed", exc)
@@ -467,7 +472,7 @@ class CameraFragment : Fragment() {
             // Get a stable reference of the modifiable image capture use case
             imageCapture?.let { imageCapture ->
 
-                // Create time stamped name and MediaStore entry.
+                // Create time stamped name and MxediaStore entry.
                 val name = SimpleDateFormat(FILENAME, Locale.US)
                     .format(System.currentTimeMillis())
                 val contentValues = ContentValues().apply {
@@ -512,6 +517,8 @@ class CameraFragment : Fragment() {
                                     Intent(android.hardware.Camera.ACTION_NEW_PICTURE, savedUri)
                                 )
                             }
+
+                            Navigation.findNavController(requireActivity(),R.id.nav_view).navigate(CameraFragmentDirections.actionCloseCamera())
                         }
                     })
 

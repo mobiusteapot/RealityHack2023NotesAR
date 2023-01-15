@@ -1219,6 +1219,9 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color icActive
+color icFocused
+color icPressed
 color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
@@ -1329,6 +1332,8 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color selector_button_text
+color selector_ic
 color sidebar_icon_tint
 color sidebar_text_color
 color switch_thumb_disabled_material_dark
@@ -2036,8 +2041,10 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id actionCloseCamera
 id actionDown
 id actionDownUp
+id actionOpenCamera
 id actionUp
 id action_bar
 id action_bar_activity_content
@@ -2086,7 +2093,7 @@ id callMeasure
 id camera_button
 id camera_capture_button
 id camera_container
-id camera_preview
+id camera_fragment
 id camera_switch_button
 id camera_ui_container
 id cancel_button
@@ -2121,6 +2128,7 @@ id currentState
 id custom
 id customPanel
 id cut
+id dataBinding
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2308,6 +2316,8 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id onAttachStateChangeListener
+id onDateChanged
 id outline
 id outward
 id overshoot
@@ -2428,6 +2438,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textWatcher
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2645,6 +2656,9 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu activity_main_drawer
+mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
@@ -2687,6 +2701,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
 string auto_mode

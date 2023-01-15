@@ -8,7 +8,9 @@
 
     <color name="re_center_title_color">#0B2742</color>
     <color name="re_center_subtitle_color">#801F3E5E</color>
-
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
     <color name="nav_view_background_color">#FFFFFF</color>
 
     <color name="background_color">#FFFFFF</color>

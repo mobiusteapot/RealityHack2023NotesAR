@@ -1,24 +1,36 @@
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentRecenterControllerBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentRecenterControllerBinding
-com/qualcomm/snapdragon/spaces/spacescontroller/BuildConfig.java
- com.qualcomm.snapdragon.spaces.spacescontroller.BuildConfig
-com/qualcomm/snapdragon/spaces/spacescontroller/databinding/AppBarControllerBinding.java
- com.qualcomm.snapdragon.spaces.spacescontroller.databinding.AppBarControllerBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentCameraBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentCameraBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/LayoutKhrSimpleProfileBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.LayoutKhrSimpleProfileBinding
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentDisplaySettingsBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentDisplaySettingsBinding
+androidx/databinding/library/baseAdapters/BR.java
+ androidx.databinding.library.baseAdapters.BR
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/ContentControllerBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.ContentControllerBinding
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/ActivityControllerBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.ActivityControllerBinding
+com/qualcomm/snapdragon/spaces/spacescontroller/DataBindingTriggerClass.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.DataBindingTriggerClass
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/CameraUiContainerBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.CameraUiContainerBinding
+com/qualcomm/snapdragon/spaces/spacescontroller/BuildConfig.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.BuildConfig
+com/qualcomm/snapdragon/spaces/spacescontroller/BR.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.BR
+com/qualcomm/snapdragon/spaces/spacescontroller/DataBinderMapperImpl.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.DataBinderMapperImpl
+ com.qualcomm.snapdragon.spaces.spacescontroller.DataBinderMapperImpl$InnerBrLookup
+ com.qualcomm.snapdragon.spaces.spacescontroller.DataBinderMapperImpl$InnerLayoutIdLookup
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/AppBarControllerBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.AppBarControllerBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentHapticSettingsBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentHapticSettingsBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentSpacesControllerBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentSpacesControllerBinding
-com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentDisplaySettingsBinding.java
- com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentDisplaySettingsBinding
-com/qualcomm/snapdragon/spaces/spacescontroller/databinding/ContentControllerBinding.java
- com.qualcomm.snapdragon.spaces.spacescontroller.databinding.ContentControllerBinding
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/LayoutMmrProfileBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.LayoutMmrProfileBinding
-com/qualcomm/snapdragon/spaces/spacescontroller/databinding/ActivityControllerBinding.java
- com.qualcomm.snapdragon.spaces.spacescontroller.databinding.ActivityControllerBinding
-com/qualcomm/snapdragon/spaces/spacescontroller/databinding/CameraUiContainerBinding.java
- com.qualcomm.snapdragon.spaces.spacescontroller.databinding.CameraUiContainerBinding

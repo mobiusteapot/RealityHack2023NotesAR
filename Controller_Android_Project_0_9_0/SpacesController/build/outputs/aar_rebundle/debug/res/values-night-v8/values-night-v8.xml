@@ -7,6 +7,9 @@
     <color name="color_switch_normal">#99ffffff</color>
     <color name="color_switch_off">#61ffffff</color>
     <color name="color_switch_on">#95B2FF</color>
+    <color name="icActive">#FFFFFFFF</color>
+    <color name="icFocused">#DDFFFFFF</color>
+    <color name="icPressed">#AAFFFFFF</color>
     <color name="nav_view_background_color">#0B2742</color>
     <color name="re_center_subtitle_color">#80CACCCE</color>
     <color name="re_center_title_color">#FFFFFF</color>

@@ -44,6 +44,7 @@ class ControllerActivity : AppCompatActivity() {
         permission = Permission()
         permission.askMicrophonePermission(this@ControllerActivity)
 //        permission.askCameraPermission(this@ControllerActivity)
+        Log.e(TAG,"Controller Activity has been started which should always print holy fuck")
 
         sharedPreferenceManager = SharedPreferenceManager(this)
         val defaultDisplayMode = resources.getInteger(R.integer.preference_display_mode)
@@ -71,37 +72,6 @@ class ControllerActivity : AppCompatActivity() {
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-    }
-    fun startCamera(cameraBinding: Preview.SurfaceProvider?) {
-        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
-
-        cameraProviderFuture.addListener({
-            // Used to bind the lifecycle of cameras to the lifecycle owner
-            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-
-            // Preview
-            val preview = Preview.Builder()
-                .build()
-                .also {
-                    it.setSurfaceProvider(cameraBinding)
-                }
-
-            // Select back camera as a default
-            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
-
-            try {
-                // Unbind use cases before rebinding
-                cameraProvider.unbindAll()
-
-                // Bind use cases to camera
-                cameraProvider.bindToLifecycle(
-                    this, cameraSelector, preview)
-
-            } catch(exc: Exception) {
-                Log.e(ControllerActivity.TAG, "Use case binding failed", exc)
-            }
-
-        }, ContextCompat.getMainExecutor(this))
     }
 
     override fun onSupportNavigateUp(): Boolean {

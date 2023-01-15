@@ -47,23 +47,24 @@
             android:id="@+id/qr_code"
             android:layout_width="328dp"
             android:layout_height="282dp"
-            app:layout_constraintBottom_toTopOf="@+id/camera_preview"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.489"
             app:srcCompat="@drawable/rickrolling_qr_code" />
+        <!--            app:layout_constraintBottom_toTopOf="@+id/camera_preview"-->
 
-        <androidx.camera.view.PreviewView
-            android:id="@+id/camera_preview"
-            android:layout_width="366dp"
-            android:layout_height="302dp"
-            android:layout_marginBottom="16dp"
-            android:contentDescription="camera_preview"
-            app:layout_constraintBottom_toTopOf="@+id/camera_button"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--        <androidx.camera.view.PreviewView-->
+<!--            android:id="@+id/camera_preview"-->
+<!--            android:layout_width="366dp"-->
+<!--            android:layout_height="302dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:contentDescription="camera_preview"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/camera_button"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.515"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
 
         <ImageButton
             android:id="@+id/camera_button"
