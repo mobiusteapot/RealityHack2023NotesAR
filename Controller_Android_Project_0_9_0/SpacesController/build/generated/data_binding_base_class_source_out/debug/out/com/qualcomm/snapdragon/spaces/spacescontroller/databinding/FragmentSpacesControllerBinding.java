@@ -4,12 +4,11 @@ package com.qualcomm.snapdragon.spaces.spacescontroller.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.AppCompatButton;
-import androidx.appcompat.widget.AppCompatImageView;
-import androidx.appcompat.widget.AppCompatTextView;
-import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.camera.view.PreviewView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Guideline;
 import androidx.viewbinding.ViewBinding;
@@ -24,13 +23,16 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageButton cameraButton;
+
+  @NonNull
+  public final PreviewView cameraPreview;
+
+  @NonNull
+  public final ImageView qrCode;
+
+  @NonNull
   public final ConstraintLayout spacesContainer;
-
-  @NonNull
-  public final AppCompatImageView spacesLogo;
-
-  @NonNull
-  public final AppCompatButton spacesMenu;
 
   @NonNull
   public final Guideline spacesProfileBottom;
@@ -44,42 +46,20 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
   @NonNull
   public final Guideline spacesProfileTopMargin;
 
-  @NonNull
-  public final LinearLayoutCompat spacesReCenter;
-
-  @NonNull
-  public final AppCompatTextView spacesReCenterSubtitleText;
-
-  @NonNull
-  public final AppCompatTextView spacesReCenterText;
-
-  @NonNull
-  public final LinearLayoutCompat spacesTrackpad;
-
-  @NonNull
-  public final LinearLayoutCompat spacesTrackpadTiles;
-
   private FragmentSpacesControllerBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout spacesContainer, @NonNull AppCompatImageView spacesLogo,
-      @NonNull AppCompatButton spacesMenu, @NonNull Guideline spacesProfileBottom,
-      @NonNull Guideline spacesProfileBottomMargin, @NonNull Guideline spacesProfileTop,
-      @NonNull Guideline spacesProfileTopMargin, @NonNull LinearLayoutCompat spacesReCenter,
-      @NonNull AppCompatTextView spacesReCenterSubtitleText,
-      @NonNull AppCompatTextView spacesReCenterText, @NonNull LinearLayoutCompat spacesTrackpad,
-      @NonNull LinearLayoutCompat spacesTrackpadTiles) {
+      @NonNull ImageButton cameraButton, @NonNull PreviewView cameraPreview,
+      @NonNull ImageView qrCode, @NonNull ConstraintLayout spacesContainer,
+      @NonNull Guideline spacesProfileBottom, @NonNull Guideline spacesProfileBottomMargin,
+      @NonNull Guideline spacesProfileTop, @NonNull Guideline spacesProfileTopMargin) {
     this.rootView = rootView;
+    this.cameraButton = cameraButton;
+    this.cameraPreview = cameraPreview;
+    this.qrCode = qrCode;
     this.spacesContainer = spacesContainer;
-    this.spacesLogo = spacesLogo;
-    this.spacesMenu = spacesMenu;
     this.spacesProfileBottom = spacesProfileBottom;
     this.spacesProfileBottomMargin = spacesProfileBottomMargin;
     this.spacesProfileTop = spacesProfileTop;
     this.spacesProfileTopMargin = spacesProfileTopMargin;
-    this.spacesReCenter = spacesReCenter;
-    this.spacesReCenterSubtitleText = spacesReCenterSubtitleText;
-    this.spacesReCenterText = spacesReCenterText;
-    this.spacesTrackpad = spacesTrackpad;
-    this.spacesTrackpadTiles = spacesTrackpadTiles;
   }
 
   @Override
@@ -109,21 +89,27 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.camera_button;
+      ImageButton cameraButton = ViewBindings.findChildViewById(rootView, id);
+      if (cameraButton == null) {
+        break missingId;
+      }
+
+      id = R.id.camera_preview;
+      PreviewView cameraPreview = ViewBindings.findChildViewById(rootView, id);
+      if (cameraPreview == null) {
+        break missingId;
+      }
+
+      id = R.id.qr_code;
+      ImageView qrCode = ViewBindings.findChildViewById(rootView, id);
+      if (qrCode == null) {
+        break missingId;
+      }
+
       id = R.id.spaces_container;
       ConstraintLayout spacesContainer = ViewBindings.findChildViewById(rootView, id);
       if (spacesContainer == null) {
-        break missingId;
-      }
-
-      id = R.id.spaces_logo;
-      AppCompatImageView spacesLogo = ViewBindings.findChildViewById(rootView, id);
-      if (spacesLogo == null) {
-        break missingId;
-      }
-
-      id = R.id.spaces_menu;
-      AppCompatButton spacesMenu = ViewBindings.findChildViewById(rootView, id);
-      if (spacesMenu == null) {
         break missingId;
       }
 
@@ -151,40 +137,9 @@ public final class FragmentSpacesControllerBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.spaces_re_center;
-      LinearLayoutCompat spacesReCenter = ViewBindings.findChildViewById(rootView, id);
-      if (spacesReCenter == null) {
-        break missingId;
-      }
-
-      id = R.id.spaces_re_center_subtitle_text;
-      AppCompatTextView spacesReCenterSubtitleText = ViewBindings.findChildViewById(rootView, id);
-      if (spacesReCenterSubtitleText == null) {
-        break missingId;
-      }
-
-      id = R.id.spaces_re_center_text;
-      AppCompatTextView spacesReCenterText = ViewBindings.findChildViewById(rootView, id);
-      if (spacesReCenterText == null) {
-        break missingId;
-      }
-
-      id = R.id.spaces_trackpad;
-      LinearLayoutCompat spacesTrackpad = ViewBindings.findChildViewById(rootView, id);
-      if (spacesTrackpad == null) {
-        break missingId;
-      }
-
-      id = R.id.spaces_trackpad_tiles;
-      LinearLayoutCompat spacesTrackpadTiles = ViewBindings.findChildViewById(rootView, id);
-      if (spacesTrackpadTiles == null) {
-        break missingId;
-      }
-
-      return new FragmentSpacesControllerBinding((ConstraintLayout) rootView, spacesContainer,
-          spacesLogo, spacesMenu, spacesProfileBottom, spacesProfileBottomMargin, spacesProfileTop,
-          spacesProfileTopMargin, spacesReCenter, spacesReCenterSubtitleText, spacesReCenterText,
-          spacesTrackpad, spacesTrackpadTiles);
+      return new FragmentSpacesControllerBinding((ConstraintLayout) rootView, cameraButton,
+          cameraPreview, qrCode, spacesContainer, spacesProfileBottom, spacesProfileBottomMargin,
+          spacesProfileTop, spacesProfileTopMargin);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

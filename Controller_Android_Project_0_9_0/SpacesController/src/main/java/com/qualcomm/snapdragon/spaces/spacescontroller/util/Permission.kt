@@ -19,13 +19,13 @@ class Permission{
         if(currentMicrophonePermission != PackageManager.PERMISSION_GRANTED)
             ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.RECORD_AUDIO), userMicrophonePermissionAgreeCode)
     }
-    fun askCameraPermission(context: Context){
+//    fun askCameraPermission(context: Context){
 //        val currentCameraPermission = ActivityCompat.checkSelfPermission(context,android.Manifest.permission.CAMERA)
 //
 //
 //        if(currentCameraPermission != PackageManager.PERMISSION_GRANTED)
 //            ActivityCompat.requestPermissions(context as Activity, arrayOf(android.Manifest.permission.CAMERA), )
-    }
+//    }
 
     fun handlePermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         when(requestCode){

@@ -110,7 +110,9 @@ attr actionOverflowMenuStyle
 attr actionProviderClass
 attr actionTextColorAlpha
 attr actionViewClass
+attr activityAction
 attr activityChooserViewStyle
+attr activityName
 attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
@@ -119,6 +121,7 @@ attr allowStacking
 attr alpha
 attr alphabeticModifiers
 attr altSrc
+attr alwaysExpand
 attr animateCircleAngleTo
 attr animateRelativeTo
 attr animate_relativeTo
@@ -260,6 +263,7 @@ attr circularflow_defaultAngle
 attr circularflow_defaultRadius
 attr circularflow_radiusInDP
 attr circularflow_viewCenter
+attr clearTop
 attr clearsTag
 attr clickAction
 attr clockFaceBackgroundColor
@@ -449,6 +453,8 @@ attr fastScrollHorizontalThumbDrawable
 attr fastScrollHorizontalTrackDrawable
 attr fastScrollVerticalThumbDrawable
 attr fastScrollVerticalTrackDrawable
+attr finishPrimaryWithSecondary
+attr finishSecondaryWithPrimary
 attr firstBaselineToTopHeight
 attr floatingActionButtonStyle
 attr flow_firstHorizontalBias
@@ -794,6 +800,7 @@ attr percentX
 attr percentY
 attr perpendicularPath_percent
 attr pivotAnchor
+attr placeholderActivityName
 attr placeholderText
 attr placeholderTextAppearance
 attr placeholderTextColor
@@ -813,6 +820,7 @@ attr prefixTextAppearance
 attr prefixTextColor
 attr preserveIconSpacing
 attr pressedTranslationZ
+attr primaryActivityName
 attr progressBarPadding
 attr progressBarStyle
 attr quantizeMotionInterpolator
@@ -851,6 +859,8 @@ attr scrimVisibleHeightTrigger
 attr searchHintIcon
 attr searchIcon
 attr searchViewStyle
+attr secondaryActivityAction
+attr secondaryActivityName
 attr seekBarStyle
 attr selectableItemBackground
 attr selectableItemBackgroundBorderless
@@ -884,6 +894,10 @@ attr spanCount
 attr spinBars
 attr spinnerDropDownItemStyle
 attr spinnerStyle
+attr splitLayoutDirection
+attr splitMinSmallestWidth
+attr splitMinWidth
+attr splitRatio
 attr splitTrack
 attr springBoundary
 attr springDamping
@@ -1205,6 +1219,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -1492,6 +1507,11 @@ dimen hint_pressed_alpha_material_light
 dimen item_touch_helper_max_drag_scroll_per_frame
 dimen item_touch_helper_swipe_escape_max_velocity
 dimen item_touch_helper_swipe_escape_velocity
+dimen margin_large
+dimen margin_medium
+dimen margin_small
+dimen margin_xlarge
+dimen margin_xsmall
 dimen material_bottom_sheet_max_width
 dimen material_clock_display_padding
 dimen material_clock_face_margin_top
@@ -1737,7 +1757,20 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen rect_button_height
+dimen rect_button_margin
+dimen rect_button_width
+dimen round_button_large
+dimen round_button_medium
+dimen round_button_small
+dimen shutter_button_margin
 dimen sliding_pane_detail_pane_width
+dimen spacing_large
+dimen spacing_medium
+dimen spacing_small
+dimen stroke_large
+dimen stroke_medium
+dimen stroke_small
 dimen test_mtrl_calendar_day_cornerSize
 dimen test_navigation_bar_active_item_max_width
 dimen test_navigation_bar_active_item_min_width
@@ -1864,6 +1897,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_round_corners
 drawable camera
 drawable component_btn_background
 drawable design_bottom_navigation_item_background
@@ -1877,6 +1911,7 @@ drawable haptic_strength_progress
 drawable haptic_strength_shadow
 drawable haptic_strength_style
 drawable haptic_strength_thumb
+drawable ic_back
 drawable ic_baseline_power_settings_new_24
 drawable ic_call_answer
 drawable ic_call_answer_low
@@ -1885,16 +1920,26 @@ drawable ic_call_answer_video_low
 drawable ic_call_decline
 drawable ic_call_decline_low
 drawable ic_clock_black_24dp
+drawable ic_delete
 drawable ic_display_settings
 drawable ic_haptic_settings
 drawable ic_help_settings
 drawable ic_keyboard_black_24dp
+drawable ic_launcher_background
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_outer_circle
+drawable ic_photo
 drawable ic_radio_button_checked
 drawable ic_radio_button_unchecked
+drawable ic_share
+drawable ic_shutter
+drawable ic_shutter_focused
+drawable ic_shutter_normal
+drawable ic_shutter_pressed
+drawable ic_switch
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2017,6 +2062,7 @@ id add
 id alertTitle
 id aligned
 id allStates
+id androidx_window_activity_scope
 id animateToEnd
 id animateToStart
 id antiClockwise
@@ -2037,6 +2083,12 @@ id bottom
 id bounce
 id buttonPanel
 id callMeasure
+id camera_button
+id camera_capture_button
+id camera_container
+id camera_preview
+id camera_switch_button
+id camera_ui_container
 id cancel_button
 id carryVelocity
 id center
@@ -2120,6 +2172,7 @@ id fragment_container_view_tag
 id frost
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id group_divider
 id guideline
@@ -2162,6 +2215,8 @@ id line3
 id linear
 id listMode
 id list_item
+id locale
+id ltr
 id masked
 id match_constraint
 id match_parent
@@ -2267,6 +2322,7 @@ id path
 id pathRelative
 id percent
 id performance
+id photo_view_button
 id pin
 id position
 id postLayout
@@ -2274,6 +2330,7 @@ id profile_container
 id progress_circular
 id progress_horizontal
 id progressshape
+id qr_code
 id radio
 id radio_auto_mode
 id radio_dark_mode
@@ -2287,6 +2344,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rtl
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -2323,17 +2381,10 @@ id snackbar_text
 id south
 id spacer
 id spaces_container
-id spaces_logo
-id spaces_menu
 id spaces_profile_bottom
 id spaces_profile_bottom_margin
 id spaces_profile_top
 id spaces_profile_top_margin
-id spaces_re_center
-id spaces_re_center_subtitle_text
-id spaces_re_center_text
-id spaces_trackpad
-id spaces_trackpad_tiles
 id special_effects_controller_view_tag
 id spline
 id split_action_bar
@@ -2411,6 +2462,7 @@ id uniform
 id unlabeled
 id up
 id vertical_only
+id view_finder
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -2499,6 +2551,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_controller
 layout app_bar_controller
+layout camera_ui_container
 layout content_controller
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2516,6 +2569,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout fragment_camera
 layout fragment_display_settings
 layout fragment_haptic_settings
 layout fragment_recenter_controller
@@ -2633,6 +2687,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string action_settings
+string app_name
 string appbar_scrolling_view_behavior
 string auto_mode
 string bottom_sheet_behavior
@@ -2760,6 +2815,7 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style AppTheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
@@ -3491,7 +3547,9 @@ styleable ActionMenuItemView android_minWidth
 styleable ActionMenuView
 styleable ActionMode background backgroundSplit closeItemLayout height subtitleTextStyle titleTextStyle
 styleable ActivityChooserView expandActivityOverflowButtonDrawable initialActivityCount
+styleable ActivityFilter activityAction activityName
 styleable ActivityNavigator action android_name data dataPattern targetPackage
+styleable ActivityRule alwaysExpand
 styleable AlertDialog android_layout buttonIconDimen buttonPanelSideLayout listItemLayout listLayout multiChoiceItemLayout showTitle singleChoiceItemLayout
 styleable AnimatedStateListDrawableCompat android_constantSize android_dither android_enterFadeDuration android_exitFadeDuration android_variablePadding android_visible
 styleable AnimatedStateListDrawableItem android_drawable android_id
@@ -3620,6 +3678,9 @@ styleable Slider android_enabled android_stepSize android_value android_valueFro
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout actionTextColorAlpha android_maxWidth animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth
 styleable Spinner android_dropDownWidth android_entries android_popupBackground android_prompt popupTheme
+styleable SplitPairFilter primaryActivityName secondaryActivityAction secondaryActivityName
+styleable SplitPairRule clearTop finishPrimaryWithSecondary finishSecondaryWithPrimary splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio
+styleable SplitPlaceholderRule placeholderActivityName splitLayoutDirection splitMinSmallestWidth splitMinWidth splitRatio
 styleable State android_id constraints
 styleable StateListDrawable android_constantSize android_dither android_enterFadeDuration android_exitFadeDuration android_variablePadding android_visible
 styleable StateListDrawableItem android_drawable

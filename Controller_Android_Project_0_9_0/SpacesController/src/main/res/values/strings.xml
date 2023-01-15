@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Input emulator -->
+    <string name="app_name">CameraX Basic</string>
     <string name="component_menu">Menu</string>
     <string name="component_re_center">Re-center</string>
     <string name="component_re_center_subtitle">(Double click)</string>

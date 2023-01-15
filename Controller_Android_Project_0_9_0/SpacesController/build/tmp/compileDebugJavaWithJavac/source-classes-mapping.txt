@@ -4,6 +4,8 @@ com/qualcomm/snapdragon/spaces/spacescontroller/BuildConfig.java
  com.qualcomm.snapdragon.spaces.spacescontroller.BuildConfig
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/AppBarControllerBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.AppBarControllerBinding
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentCameraBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.FragmentCameraBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/LayoutKhrSimpleProfileBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.LayoutKhrSimpleProfileBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/FragmentHapticSettingsBinding.java
@@ -18,3 +20,5 @@ com/qualcomm/snapdragon/spaces/spacescontroller/databinding/LayoutMmrProfileBind
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.LayoutMmrProfileBinding
 com/qualcomm/snapdragon/spaces/spacescontroller/databinding/ActivityControllerBinding.java
  com.qualcomm.snapdragon.spaces.spacescontroller.databinding.ActivityControllerBinding
+com/qualcomm/snapdragon/spaces/spacescontroller/databinding/CameraUiContainerBinding.java
+ com.qualcomm.snapdragon.spaces.spacescontroller.databinding.CameraUiContainerBinding

@@ -109,7 +109,9 @@ int attr actionOverflowMenuStyle 0x0
 int attr actionProviderClass 0x0
 int attr actionTextColorAlpha 0x0
 int attr actionViewClass 0x0
+int attr activityAction 0x0
 int attr activityChooserViewStyle 0x0
+int attr activityName 0x0
 int attr alertDialogButtonGroupStyle 0x0
 int attr alertDialogCenterButtons 0x0
 int attr alertDialogStyle 0x0
@@ -118,6 +120,7 @@ int attr allowStacking 0x0
 int attr alpha 0x0
 int attr alphabeticModifiers 0x0
 int attr altSrc 0x0
+int attr alwaysExpand 0x0
 int attr animateCircleAngleTo 0x0
 int attr animateRelativeTo 0x0
 int attr animate_relativeTo 0x0
@@ -259,6 +262,7 @@ int attr circularflow_defaultAngle 0x0
 int attr circularflow_defaultRadius 0x0
 int attr circularflow_radiusInDP 0x0
 int attr circularflow_viewCenter 0x0
+int attr clearTop 0x0
 int attr clearsTag 0x0
 int attr clickAction 0x0
 int attr clockFaceBackgroundColor 0x0
@@ -448,6 +452,8 @@ int attr fastScrollHorizontalThumbDrawable 0x0
 int attr fastScrollHorizontalTrackDrawable 0x0
 int attr fastScrollVerticalThumbDrawable 0x0
 int attr fastScrollVerticalTrackDrawable 0x0
+int attr finishPrimaryWithSecondary 0x0
+int attr finishSecondaryWithPrimary 0x0
 int attr firstBaselineToTopHeight 0x0
 int attr floatingActionButtonStyle 0x0
 int attr flow_firstHorizontalBias 0x0
@@ -793,6 +799,7 @@ int attr percentX 0x0
 int attr percentY 0x0
 int attr perpendicularPath_percent 0x0
 int attr pivotAnchor 0x0
+int attr placeholderActivityName 0x0
 int attr placeholderText 0x0
 int attr placeholderTextAppearance 0x0
 int attr placeholderTextColor 0x0
@@ -812,6 +819,7 @@ int attr prefixTextAppearance 0x0
 int attr prefixTextColor 0x0
 int attr preserveIconSpacing 0x0
 int attr pressedTranslationZ 0x0
+int attr primaryActivityName 0x0
 int attr progressBarPadding 0x0
 int attr progressBarStyle 0x0
 int attr quantizeMotionInterpolator 0x0
@@ -850,6 +858,8 @@ int attr scrimVisibleHeightTrigger 0x0
 int attr searchHintIcon 0x0
 int attr searchIcon 0x0
 int attr searchViewStyle 0x0
+int attr secondaryActivityAction 0x0
+int attr secondaryActivityName 0x0
 int attr seekBarStyle 0x0
 int attr selectableItemBackground 0x0
 int attr selectableItemBackgroundBorderless 0x0
@@ -883,6 +893,10 @@ int attr spanCount 0x0
 int attr spinBars 0x0
 int attr spinnerDropDownItemStyle 0x0
 int attr spinnerStyle 0x0
+int attr splitLayoutDirection 0x0
+int attr splitMinSmallestWidth 0x0
+int attr splitMinWidth 0x0
+int attr splitRatio 0x0
 int attr splitTrack 0x0
 int attr springBoundary 0x0
 int attr springDamping 0x0
@@ -1204,6 +1218,7 @@ int color foreground_material_dark 0x0
 int color foreground_material_light 0x0
 int color highlighted_text_material_dark 0x0
 int color highlighted_text_material_light 0x0
+int color ic_launcher_background 0x0
 int color material_blue_grey_800 0x0
 int color material_blue_grey_900 0x0
 int color material_blue_grey_950 0x0
@@ -1491,6 +1506,11 @@ int dimen hint_pressed_alpha_material_light 0x0
 int dimen item_touch_helper_max_drag_scroll_per_frame 0x0
 int dimen item_touch_helper_swipe_escape_max_velocity 0x0
 int dimen item_touch_helper_swipe_escape_velocity 0x0
+int dimen margin_large 0x0
+int dimen margin_medium 0x0
+int dimen margin_small 0x0
+int dimen margin_xlarge 0x0
+int dimen margin_xsmall 0x0
 int dimen material_bottom_sheet_max_width 0x0
 int dimen material_clock_display_padding 0x0
 int dimen material_clock_face_margin_top 0x0
@@ -1736,7 +1756,20 @@ int dimen notification_small_icon_size_as_large 0x0
 int dimen notification_subtext_size 0x0
 int dimen notification_top_pad 0x0
 int dimen notification_top_pad_large_text 0x0
+int dimen rect_button_height 0x0
+int dimen rect_button_margin 0x0
+int dimen rect_button_width 0x0
+int dimen round_button_large 0x0
+int dimen round_button_medium 0x0
+int dimen round_button_small 0x0
+int dimen shutter_button_margin 0x0
 int dimen sliding_pane_detail_pane_width 0x0
+int dimen spacing_large 0x0
+int dimen spacing_medium 0x0
+int dimen spacing_small 0x0
+int dimen stroke_large 0x0
+int dimen stroke_medium 0x0
+int dimen stroke_small 0x0
 int dimen test_mtrl_calendar_day_cornerSize 0x0
 int dimen test_navigation_bar_active_item_max_width 0x0
 int dimen test_navigation_bar_active_item_min_width 0x0
@@ -1863,6 +1896,7 @@ int drawable btn_radio_off_mtrl 0x0
 int drawable btn_radio_off_to_on_mtrl_animation 0x0
 int drawable btn_radio_on_mtrl 0x0
 int drawable btn_radio_on_to_off_mtrl_animation 0x0
+int drawable button_round_corners 0x0
 int drawable camera 0x0
 int drawable component_btn_background 0x0
 int drawable design_bottom_navigation_item_background 0x0
@@ -1876,6 +1910,7 @@ int drawable haptic_strength_progress 0x0
 int drawable haptic_strength_shadow 0x0
 int drawable haptic_strength_style 0x0
 int drawable haptic_strength_thumb 0x0
+int drawable ic_back 0x0
 int drawable ic_baseline_power_settings_new_24 0x0
 int drawable ic_call_answer 0x0
 int drawable ic_call_answer_low 0x0
@@ -1884,16 +1919,26 @@ int drawable ic_call_answer_video_low 0x0
 int drawable ic_call_decline 0x0
 int drawable ic_call_decline_low 0x0
 int drawable ic_clock_black_24dp 0x0
+int drawable ic_delete 0x0
 int drawable ic_display_settings 0x0
 int drawable ic_haptic_settings 0x0
 int drawable ic_help_settings 0x0
 int drawable ic_keyboard_black_24dp 0x0
+int drawable ic_launcher_background 0x0
 int drawable ic_mtrl_checked_circle 0x0
 int drawable ic_mtrl_chip_checked_black 0x0
 int drawable ic_mtrl_chip_checked_circle 0x0
 int drawable ic_mtrl_chip_close_circle 0x0
+int drawable ic_outer_circle 0x0
+int drawable ic_photo 0x0
 int drawable ic_radio_button_checked 0x0
 int drawable ic_radio_button_unchecked 0x0
+int drawable ic_share 0x0
+int drawable ic_shutter 0x0
+int drawable ic_shutter_focused 0x0
+int drawable ic_shutter_normal 0x0
+int drawable ic_shutter_pressed 0x0
+int drawable ic_switch 0x0
 int drawable material_cursor_drawable 0x0
 int drawable material_ic_calendar_black_24dp 0x0
 int drawable material_ic_clear_black_24dp 0x0
@@ -2016,6 +2061,7 @@ int id add 0x0
 int id alertTitle 0x0
 int id aligned 0x0
 int id allStates 0x0
+int id androidx_window_activity_scope 0x0
 int id animateToEnd 0x0
 int id animateToStart 0x0
 int id antiClockwise 0x0
@@ -2036,6 +2082,12 @@ int id bottom 0x0
 int id bounce 0x0
 int id buttonPanel 0x0
 int id callMeasure 0x0
+int id camera_button 0x0
+int id camera_capture_button 0x0
+int id camera_container 0x0
+int id camera_preview 0x0
+int id camera_switch_button 0x0
+int id camera_ui_container 0x0
 int id cancel_button 0x0
 int id carryVelocity 0x0
 int id center 0x0
@@ -2119,6 +2171,7 @@ int id fragment_container_view_tag 0x0
 int id frost 0x0
 int id ghost_view 0x0
 int id ghost_view_holder 0x0
+int id glide_custom_view_target_tag 0x0
 int id gone 0x0
 int id group_divider 0x0
 int id guideline 0x0
@@ -2161,6 +2214,8 @@ int id line3 0x0
 int id linear 0x0
 int id listMode 0x0
 int id list_item 0x0
+int id locale 0x0
+int id ltr 0x0
 int id masked 0x0
 int id match_constraint 0x0
 int id match_parent 0x0
@@ -2266,6 +2321,7 @@ int id path 0x0
 int id pathRelative 0x0
 int id percent 0x0
 int id performance 0x0
+int id photo_view_button 0x0
 int id pin 0x0
 int id position 0x0
 int id postLayout 0x0
@@ -2273,6 +2329,7 @@ int id profile_container 0x0
 int id progress_circular 0x0
 int id progress_horizontal 0x0
 int id progressshape 0x0
+int id qr_code 0x0
 int id radio 0x0
 int id radio_auto_mode 0x0
 int id radio_dark_mode 0x0
@@ -2286,6 +2343,7 @@ int id right_icon 0x0
 int id right_side 0x0
 int id rounded 0x0
 int id row_index_key 0x0
+int id rtl 0x0
 int id save_non_transition_alpha 0x0
 int id save_overlay_view 0x0
 int id sawtooth 0x0
@@ -2322,17 +2380,10 @@ int id snackbar_text 0x0
 int id south 0x0
 int id spacer 0x0
 int id spaces_container 0x0
-int id spaces_logo 0x0
-int id spaces_menu 0x0
 int id spaces_profile_bottom 0x0
 int id spaces_profile_bottom_margin 0x0
 int id spaces_profile_top 0x0
 int id spaces_profile_top_margin 0x0
-int id spaces_re_center 0x0
-int id spaces_re_center_subtitle_text 0x0
-int id spaces_re_center_text 0x0
-int id spaces_trackpad 0x0
-int id spaces_trackpad_tiles 0x0
 int id special_effects_controller_view_tag 0x0
 int id spline 0x0
 int id split_action_bar 0x0
@@ -2410,6 +2461,7 @@ int id uniform 0x0
 int id unlabeled 0x0
 int id up 0x0
 int id vertical_only 0x0
+int id view_finder 0x0
 int id view_offset_helper 0x0
 int id view_transition 0x0
 int id view_tree_lifecycle_owner 0x0
@@ -2498,6 +2550,7 @@ int layout abc_select_dialog_material 0x0
 int layout abc_tooltip 0x0
 int layout activity_controller 0x0
 int layout app_bar_controller 0x0
+int layout camera_ui_container 0x0
 int layout content_controller 0x0
 int layout custom_dialog 0x0
 int layout design_bottom_navigation_item 0x0
@@ -2515,6 +2568,7 @@ int layout design_navigation_menu 0x0
 int layout design_navigation_menu_item 0x0
 int layout design_text_input_end_icon 0x0
 int layout design_text_input_start_icon 0x0
+int layout fragment_camera 0x0
 int layout fragment_display_settings 0x0
 int layout fragment_haptic_settings 0x0
 int layout fragment_recenter_controller 0x0
@@ -2632,6 +2686,7 @@ int string abc_shareactionprovider_share_with 0x0
 int string abc_shareactionprovider_share_with_application 0x0
 int string abc_toolbar_collapse_description 0x0
 int string action_settings 0x0
+int string app_name 0x0
 int string appbar_scrolling_view_behavior 0x0
 int string auto_mode 0x0
 int string bottom_sheet_behavior 0x0
@@ -2759,6 +2814,7 @@ int style Animation_AppCompat_DropDownUp 0x0
 int style Animation_AppCompat_Tooltip 0x0
 int style Animation_Design_BottomSheetDialog 0x0
 int style Animation_MaterialComponents_BottomSheetDialog 0x0
+int style AppTheme 0x0
 int style Base_AlertDialog_AppCompat 0x0
 int style Base_AlertDialog_AppCompat_Light 0x0
 int style Base_Animation_AppCompat_Dialog 0x0
@@ -3529,12 +3585,17 @@ int styleable ActionMode_titleTextStyle 5
 int[] styleable ActivityChooserView { 0x0, 0x0 }
 int styleable ActivityChooserView_expandActivityOverflowButtonDrawable 0
 int styleable ActivityChooserView_initialActivityCount 1
+int[] styleable ActivityFilter { 0x0, 0x0 }
+int styleable ActivityFilter_activityAction 0
+int styleable ActivityFilter_activityName 1
 int[] styleable ActivityNavigator { 0x0, 0x1010003, 0x0, 0x0, 0x0 }
 int styleable ActivityNavigator_action 0
 int styleable ActivityNavigator_android_name 1
 int styleable ActivityNavigator_data 2
 int styleable ActivityNavigator_dataPattern 3
 int styleable ActivityNavigator_targetPackage 4
+int[] styleable ActivityRule { 0x0 }
+int styleable ActivityRule_alwaysExpand 0
 int[] styleable AlertDialog { 0x10100f2, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable AlertDialog_android_layout 0
 int styleable AlertDialog_buttonIconDimen 1
@@ -5179,6 +5240,24 @@ int styleable Spinner_android_entries 1
 int styleable Spinner_android_popupBackground 2
 int styleable Spinner_android_prompt 3
 int styleable Spinner_popupTheme 4
+int[] styleable SplitPairFilter { 0x0, 0x0, 0x0 }
+int styleable SplitPairFilter_primaryActivityName 0
+int styleable SplitPairFilter_secondaryActivityAction 1
+int styleable SplitPairFilter_secondaryActivityName 2
+int[] styleable SplitPairRule { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable SplitPairRule_clearTop 0
+int styleable SplitPairRule_finishPrimaryWithSecondary 1
+int styleable SplitPairRule_finishSecondaryWithPrimary 2
+int styleable SplitPairRule_splitLayoutDirection 3
+int styleable SplitPairRule_splitMinSmallestWidth 4
+int styleable SplitPairRule_splitMinWidth 5
+int styleable SplitPairRule_splitRatio 6
+int[] styleable SplitPlaceholderRule { 0x0, 0x0, 0x0, 0x0, 0x0 }
+int styleable SplitPlaceholderRule_placeholderActivityName 0
+int styleable SplitPlaceholderRule_splitLayoutDirection 1
+int styleable SplitPlaceholderRule_splitMinSmallestWidth 2
+int styleable SplitPlaceholderRule_splitMinWidth 3
+int styleable SplitPlaceholderRule_splitRatio 4
 int[] styleable State { 0x10100d0, 0x0 }
 int styleable State_android_id 0
 int styleable State_constraints 1

@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.LinearLayoutCompat
 import androidx.appcompat.widget.SwitchCompat
 import androidx.core.content.res.ResourcesCompat
+
 import androidx.fragment.app.Fragment
 import com.qualcomm.qti.openxr.input.data.*
 import com.qualcomm.qti.openxr.input.data.fusion.PoseProducer
@@ -30,6 +31,7 @@ import kotlin.math.abs
 
 
 class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
+
 
     private var _binding: FragmentSpacesControllerBinding? = null
 
@@ -76,6 +78,7 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
         val bindings = ProfileBindingUtils.MICROSOFT_MIXED_REALITY_PROFILE.mapValues {
             InputViewHolder(it.value.associateWith { false } as MutableMap<Int, Boolean>)
         }
+
         assignViewBindings(bindings)
         if (!ProfileBindingUtils.isValid(bindings)) {
             throw IllegalArgumentException("Invalid bindings")
@@ -134,7 +137,7 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
             }
         }
 
-        _binding?.spacesReCenter?.setOnTouchListener { view, event ->
+        _binding?.cameraButton?.setOnTouchListener { view, event ->
             when (event.actionMasked) {
                 MotionEvent.ACTION_DOWN -> {
                     if (hapticEnabled) {
@@ -167,7 +170,7 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
         systemUiController = SystemUiController(requireActivity().window.decorView)
         setupPoseProducer()
 
-        removeCroppedTilesFromTrackpadBackground()
+//        removeCroppedTilesFromTrackpadBackground()
 
         return root
     }
@@ -178,15 +181,15 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
     }
 
     override fun assignViewBindings(bindings: Map<Int, InputViewHolder>) {
-        val trackpadViewHolder = bindings[Identifier.TRACKPAD]
-        trackpadViewHolder?.view = _binding?.spacesTrackpad
-        trackpadViewHolder?.components?.set(Component.XY, true)
-        trackpadViewHolder?.components?.set(Component.CLICK, true)
-        trackpadViewHolder?.components?.set(Component.TOUCH, true)
-
-        val selectViewHolder = bindings[Identifier.MENU]
-        selectViewHolder?.view = _binding?.spacesMenu
-        selectViewHolder?.components?.set(Component.CLICK, true)
+//        val trackpadViewHolder = bindings[Identifier.TRACKPAD]
+//        trackpadViewHolder?.view = _binding?.spacesTrackpad
+//        trackpadViewHolder?.components?.set(Component.XY, true)
+//        trackpadViewHolder?.components?.set(Component.CLICK, true)
+//        trackpadViewHolder?.components?.set(Component.TOUCH, true)
+//
+//        val selectViewHolder = bindings[Identifier.MENU]
+//        selectViewHolder?.view = _binding?.spacesMenu
+//        selectViewHolder?.components?.set(Component.CLICK, true)
     }
 
     override fun inflate(context: Context): View {
@@ -308,20 +311,20 @@ class SpacesControllerFragment : Fragment(), SpacesInputViewsFactory {
         val dotTileHeight = dotTileDrawable.intrinsicHeight
         val dotTileWidth = dotTileDrawable.intrinsicWidth
 
-        binding.spacesTrackpadTiles.viewTreeObserver.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                val trackpadTileBackgroundHeight: Int = binding.spacesTrackpadTiles.height
-                val trackpadTileBackgroundWidth: Int = binding.spacesTrackpadTiles.width
-
-                val numberOfVerticalDots: Int = trackpadTileBackgroundHeight.div(dotTileHeight)
-                val numberOfHorizontalDots: Int = trackpadTileBackgroundWidth.div(dotTileWidth)
-
-                val layoutParams = LinearLayoutCompat.LayoutParams(numberOfHorizontalDots * dotTileWidth, numberOfVerticalDots * dotTileHeight)
-                binding.spacesTrackpadTiles.layoutParams = layoutParams
-                binding.spacesTrackpadTiles.invalidate()
-                binding.spacesTrackpadTiles.viewTreeObserver.removeOnGlobalLayoutListener(this)
-            }
-        })
+//        binding.spacesTrackpadTiles.viewTreeObserver.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+//            override fun onGlobalLayout() {
+//                val trackpadTileBackgroundHeight: Int = binding.spacesTrackpadTiles.height
+//                val trackpadTileBackgroundWidth: Int = binding.spacesTrackpadTiles.width
+//
+//                val numberOfVerticalDots: Int = trackpadTileBackgroundHeight.div(dotTileHeight)
+//                val numberOfHorizontalDots: Int = trackpadTileBackgroundWidth.div(dotTileWidth)
+//
+//                val layoutParams = LinearLayoutCompat.LayoutParams(numberOfHorizontalDots * dotTileWidth, numberOfVerticalDots * dotTileHeight)
+//                binding.spacesTrackpadTiles.layoutParams = layoutParams
+//                binding.spacesTrackpadTiles.invalidate()
+//                binding.spacesTrackpadTiles.viewTreeObserver.removeOnGlobalLayoutListener(this)
+//            }
+//        })
     }
 
     companion object {

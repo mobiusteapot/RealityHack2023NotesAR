@@ -1,5 +1,7 @@
 package com.qualcomm.snapdragon.spaces.spacescontroller
 
+import android.Manifest
+import android.os.Build
 import androidx.core.content.ContextCompat
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.core.Preview
@@ -20,6 +22,11 @@ import com.qualcomm.snapdragon.spaces.spacescontroller.util.DisplayMode
 import com.qualcomm.snapdragon.spaces.spacescontroller.util.SharedPreferenceManager
 import com.qualcomm.snapdragon.spaces.spacescontroller.util.Permission
 
+
+const val KEY_EVENT_ACTION = "key_event_action"
+const val KEY_EVENT_EXTRA = "key_event_extra"
+private const val IMMERSIVE_FLAG_TIMEOUT = 500L
+
 typealias LumaListener = (luma: Double) -> Unit
 
 class ControllerActivity : AppCompatActivity() {
@@ -27,9 +34,9 @@ class ControllerActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityControllerBinding
 
+
     private lateinit var sharedPreferenceManager: SharedPreferenceManager
     private lateinit var permission : Permission
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +56,7 @@ class ControllerActivity : AppCompatActivity() {
         binding = ActivityControllerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // (It still builds lol ignore error for rn)
         setSupportActionBar(binding.appBarController.toolbar)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
@@ -62,43 +70,56 @@ class ControllerActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-//        permission.handlePermissionsResult(requestCode, permissions, grantResults)
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
     }
+    fun startCamera(cameraBinding: Preview.SurfaceProvider?) {
+        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
-//    private fun startCamera() {
-//        val cameraProviderFuture = ProcessCameraProvider.getInstance(this)
-//
-//        cameraProviderFuture.addListener({
-//            // Used to bind the lifecycle of cameras to the lifecycle owner
-//            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
-//
-//            // Preview
-//            val preview = Preview.Builder()
-//                .build()
-//                .also {
-//                    it.setSurfaceProvider(binding.viewFinder.surfaceProvider)
-//                }
-//
-//            // Select back camera as a default
-//            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
-//
-//            try {
-//                // Unbind use cases before rebinding
-//                cameraProvider.unbindAll()
-//
-//                // Bind use cases to camera
-//                cameraProvider.bindToLifecycle(
-//                    this, cameraSelector, preview)
-//
-//            } catch(exc: Exception) {
-//                Log.e(TAG, "Use case binding failed", exc)
-//            }
-//
-//        }, ContextCompat.getMainExecutor(this))
-//    }
+        cameraProviderFuture.addListener({
+            // Used to bind the lifecycle of cameras to the lifecycle owner
+            val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
+
+            // Preview
+            val preview = Preview.Builder()
+                .build()
+                .also {
+                    it.setSurfaceProvider(cameraBinding)
+                }
+
+            // Select back camera as a default
+            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
+            try {
+                // Unbind use cases before rebinding
+                cameraProvider.unbindAll()
+
+                // Bind use cases to camera
+                cameraProvider.bindToLifecycle(
+                    this, cameraSelector, preview)
+
+            } catch(exc: Exception) {
+                Log.e(ControllerActivity.TAG, "Use case binding failed", exc)
+            }
+
+        }, ContextCompat.getMainExecutor(this))
+    }
+
     override fun onSupportNavigateUp(): Boolean {
         val navController = findNavController(R.id.nav_host_fragment_content_controller)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+    companion object {
+        private const val TAG = "CameraXApp"
+        private const val FILENAME_FORMAT = "yyyy-MM-dd-HH-mm-ss-SSS"
+        private const val REQUEST_CODE_PERMISSIONS = 10
+        private val REQUIRED_PERMISSIONS =
+            mutableListOf (
+                Manifest.permission.CAMERA,
+                Manifest.permission.RECORD_AUDIO
+            ).apply {
+                if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+                    add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                }
+            }.toTypedArray()
     }
 }
